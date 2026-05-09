@@ -72,25 +72,142 @@
     .navbar img:active{
         transform: scale(0.97);
     }
+#gDiv{
+       display: none;
+    margin-top: 20px;
+    padding: 10px;
+ background: linear-gradient(160deg,
+        rgba(15,15,15,0.65),
+        rgba(10,10,10,0.65)
+      );
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    inset: 0;
+    margin:auto;
+    position: fixed;
+    z-index: 1000;
+    border-radius:6px; 
+    width:70%;
+    height: 71%; 
+    overflow-x: hidden;
+    overflow-y: auto;
+box-shadow: 2px #141414;
+animation: osOpenReal 0.32s cubic-bezier(.22,1,.36,1) forwards;
+}
+#browserDiv{
+       display: none;
+    margin-top: 20px;
+    padding: 10px;
+ background: linear-gradient(160deg,
+        rgba(15,15,15,0.65),
+        rgba(10,10,10,0.65)
+      );
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    inset: 0;
+    margin:auto;
+    position: fixed;
+    z-index: 1000;
+    border-radius:6px; 
+    width:70%;
+    height: 71%; 
+    overflow-x: hidden;
+    overflow-y: auto;
+box-shadow: 2px #141414;
+animation: osOpenReal 0.32s cubic-bezier(.22,1,.36,1) forwards;
+}
+  .close-btn {
+    background: none;
+    border: none;
+    color: rgb(255, 0, 0);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    font-size:20px;
+} 
 
   </style>
   <div class="navbar">
     <a onclick="g()">
-    <img src="/img/g.png">
+    <img src="./img/g.png">
   </a>
 <a onclick="browser()">
-    <img src="/img/g.png">
+    <img src="./img/browser.png">
   </a>
   </div>
 
 </head>
 <body>
-    
-    <script>
+<h1 style=" color:white; position: absolute; top:50%; left:50%;  transform: translate(-50%, -50%); margin:0;">TEMPLATE OS</h1>
+
+<style>
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+</style>    <script>
   function g(){
     const div = document.getElementById('gDiv');
     div.style.display = div.style.display === 'block' ? 'none' : 'block';
   }
 </script>
+  <script>
+  function browser(){
+    const div = document.getElementById('browserDiv');
+    div.style.display = div.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+<div id="gDiv">
+<button class="close-btn" onclick="document.getElementById('hiddenDiv').style.display = 'none';">X</button>
+
+<h3 style="  left: 50%; color:white; top:-9.5px; position: absolute;   transform: translateX(-50%);      " >Games </h3>
+
+ 
+
+
+
+<iframe id="frame2" src="gms.html"></iframe>
+  <style>
+    #frame2{
+      width:100%;
+      height:95%;
+      bottom:0;
+      position: absolute;
+      border:none;
+      border-radius:0px 0px 12px 12px;
+      left:0;
+      border-top: 1px solid rgb(37, 37, 37);
+      background-image:url("space2.png");
+    }
+   </style>
+</div>
+
+<div id="browserDiv">
+<button class="close-btn" onclick="document.getElementById('browserDiv').style.display = 'none';">X</button>
+
+<h3 style="  left: 50%; color:white; top:-9.5px; position: absolute;   transform: translateX(-50%);      " >Games </h3>
+
+ 
+
+
+
+<iframe id="frame3" src="browser.html"></iframe>
+  <style>
+    #frame3{
+      width:100%;
+      height:95%;
+      bottom:0;
+      position: absolute;
+      border:none;
+      border-radius:0px 0px 12px 12px;
+      left:0;
+      border-top: 1px solid rgb(37, 37, 37);
+      background-image:url("space2.png");
+    }
+   </style>
+</div>
 </body>
 </html>
